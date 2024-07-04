@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.brassgoggledcoders.minescribe.mod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "MineScribeMod.refmap.json",
+  "mixins": [
+    "MineScribePackTypeEnum"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

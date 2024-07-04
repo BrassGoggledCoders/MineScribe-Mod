@@ -1,0 +1,19 @@
+modLoader="javafml"
+loaderVersion="[2,)"
+license="MIT"
+
+[[mixins]]
+config="minescribe.mixins.json"
+
+[[mods]]
+modId="minescribe"
+version="${file.jarVersion}"
+displayName="MineScribe"
+authors="SkySom"
+description='''Datapacks FOR DAYS'''
+
+[[dependencies.minescribe]]
+modId="minecraft"
+versionRange="[1.20.4,1.20.5)"
+ordering="NONE"
+side="BOTH"
