@@ -16,7 +16,7 @@ public record PackRepository(
     public static final Codec<PackRepository> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ComponentSerialization.CODEC.fieldOf("label")
                     .forGetter(PackRepository::label),
-            MineScribePath.CODEC.fieldOf("pathMatcher")
+            MineScribePath.CODEC.fieldOf("path")
                     .forGetter(PackRepository::path),
             ResourceLocation.CODEC.listOf()
                     .fieldOf("packTypes")

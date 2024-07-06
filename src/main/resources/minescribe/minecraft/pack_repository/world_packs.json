@@ -1,0 +1,11 @@
+{
+  "label": "Save Specific Data Packs",
+  "path": {
+    "anchor": "SAVES",
+    "path": "*/datapacks"
+  },
+  "packTypes": [
+    "minecraft:data",
+    "minescribe:minescribe"
+  ]
+}

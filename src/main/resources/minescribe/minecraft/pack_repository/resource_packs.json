@@ -1,4 +1,7 @@
 {
   "label": "Client Resource Packs",
-  "path": "resourcepacks"
+  "path": "resourcepacks",
+  "packTypes": [
+    "minecraft:resource"
+  ]
 }

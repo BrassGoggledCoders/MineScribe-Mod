@@ -13,16 +13,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MineScribeGenerator {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Path MINESCRIBE_PATH = FMLPaths.GAMEDIR.get()
             .resolve(".minescribe");
     private static final Path RESOURCES_PATH = MINESCRIBE_PATH.resolve("builtin");
-    private static final Map<PackType, Path> PACK_PATHS = new HashMap<>();
+    private static final Map<PackType, Path> PACK_PATHS = new ConcurrentHashMap<>();
 
 
     public static FileCounter generate(List<IWriteableManager> writeableManagerList) {
