@@ -1,6 +1,9 @@
 {
   "label": "Client Resource Packs",
-  "path": "resourcepacks",
+  "path": {
+    "anchor": "ROOT",
+    "path": "resourcepacks"
+  },
   "packTypes": [
     "minecraft:resource"
   ]

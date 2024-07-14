@@ -83,7 +83,7 @@ public class MineScribeCommand {
                             });
                 })
                 .thenApplyAsync(
-                        reloadableResources -> NeoForge.EVENT_BUS.post(new AddMineScribeWriteableManagerEvent())
+                        reloadableResources -> NeoForge.EVENT_BUS.post(new AddMineScribeWriteableManagerEvent(server))
                                 .getWriteableManagers(),
                         server
                 )

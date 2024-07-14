@@ -12,10 +12,10 @@ public record MineScribePath(
             RecordCodecBuilder.create(instance -> instance.group(
                     Codec.STRING.fieldOf("anchor").forGetter(MineScribePath::anchor),
                     Codec.STRING.fieldOf("path").forGetter(MineScribePath::path)
-            ).apply(instance, MineScribePath::new)),
+            ).apply(instance, instance.stable(MineScribePath::new))),
             Codec.STRING,
             path -> new MineScribePath(
-                    "ROOT",
+                    "NAMESPACE",
                     path
             )
     );

@@ -1,5 +1,7 @@
 package xyz.brassgoggledcoders.minescribe.mod.api.event;
 
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.server.MinecraftServer;
 import net.neoforged.bus.api.Event;
 import xyz.brassgoggledcoders.minescribe.mod.api.resource.IWriteableManager;
 
@@ -8,10 +10,15 @@ import java.util.List;
 
 public class AddMineScribeWriteableManagerEvent extends Event {
     private final List<IWriteableManager> writeableManagers;
+    private final MinecraftServer server;
 
-    public AddMineScribeWriteableManagerEvent() {
-
+    public AddMineScribeWriteableManagerEvent(MinecraftServer minecraftServer) {
+        this.server = minecraftServer;
         this.writeableManagers = new ArrayList<>();
+    }
+
+    public MinecraftServer getServer() {
+        return server;
     }
 
     public void addWritableManager(IWriteableManager writeableManager) {

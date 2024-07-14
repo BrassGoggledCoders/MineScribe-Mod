@@ -15,5 +15,5 @@ public record MineScribePackType(
             Codec.STRING.fieldOf("folder")
                     .xmap(String::toLowerCase, String::toLowerCase)
                     .forGetter(MineScribePackType::folder)
-    ).apply(instance, MineScribePackType::new));
+    ).apply(instance, instance.stable(MineScribePackType::new)));
 }

@@ -21,5 +21,5 @@ public record PackRepository(
             ResourceLocation.CODEC.listOf()
                     .fieldOf("packTypes")
                     .forGetter(PackRepository::packTypes)
-    ).apply(instance, PackRepository::new));
+    ).apply(instance, instance.stable(PackRepository::new)));
 }
